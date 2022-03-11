@@ -14,18 +14,20 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ")
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length-1] + ', ' + array[0];
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let quantPontos = wins*3 + ties*1;
+return quantPontos; 
 }
+console.log(footballPoints(0, 1));
 
 // Desafio 6
 function highestCount() {
