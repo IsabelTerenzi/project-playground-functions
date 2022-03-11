@@ -47,12 +47,23 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  for (i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] % 3 === 0 && numeros[i] %5 !== 0) {
+      numeros[i] = 'fizz';
+    } else if (numeros[i] % 5 === 0 && numeros[i] % 3 !== 0) {
+      numeros[i] = 'buzz';
+    } else if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+      numeros[i] = 'fizzBuzz';
+  } else if (numeros[i] %3 !== 0 && numeros[i] %5 !== 0) {
+    numeros[i] = 'bug!';
+}
+}
+return numeros;
 }
 
 // Desafio 9
