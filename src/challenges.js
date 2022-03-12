@@ -47,11 +47,13 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
- if(cat1 < cat2){
-  return 'cat1';
-  } else if (cat1 > cat2){
+  let dcat1 = Math.abs(cat1 - mouse);
+  let dcat2 = Math.abs(cat2 - mouse);
+  if (dcat1 < dcat2) {
+    return 'cat1';
+  } else if (dcat1 > dcat2) {
     return 'cat2';
-  } else if (cat1 === cat2){
+  } else {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -59,30 +61,46 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numeros) {
   for (i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] % 3 === 0 && numeros[i] %5 !== 0) {
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 !== 0) {
       numeros[i] = 'fizz';
     } else if (numeros[i] % 5 === 0 && numeros[i] % 3 !== 0) {
       numeros[i] = 'buzz';
     } else if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
       numeros[i] = 'fizzBuzz';
-  } else if (numeros[i] %3 !== 0 && numeros[i] %5 !== 0) {
-    numeros[i] = 'bug!';
-}
-}
-return numeros;
+    } else if (numeros[i] % 3 !== 0 && numeros[i] % 5 !== 0) {
+      numeros[i] = 'bug!';
+    }
+  }
+  return numeros;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+function encode(string) {}
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui21
+function techList(nomes, name) {
+  let tecnologias = [
+    {
+      tech: 'React',
+      name: 'Lucas',
+    },
+    {
+      tech: 'HTML',
+      name: 'Claudio',
+    },
+    {
+      tech: 'CSS',
+      name: 'Gil',
+    },
+    {
+      tech: 'Phyton',
+      name: 'Rose',
+    },
+  ];
+  return tecnologias.tech;
 }
 
 module.exports = {
