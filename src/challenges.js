@@ -88,8 +88,8 @@ function encode([frase]) {
   return novaFrase;
 }
 
-function decode([frase2]) {
-  let fraseDecode = frase2
+function decode([frase]) {
+  let fraseDecode = frase
     .replace(/1/gi, 'a')
     .replace(/2/gi, 'e')
     .replace(/3/gi, 'i')
