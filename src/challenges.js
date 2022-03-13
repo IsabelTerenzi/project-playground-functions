@@ -31,12 +31,14 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numeros) {
   let maiorNumero = numeros[0];
+  let i = 0;
   for (i = 1; i < numeros.length; i += 1) {
     if (numeros[i] > maiorNumero) {
       maiorNumero = numeros[i];
     }
   }
   let quantMaior = 0;
+  let x = 0;
   for (x = 0; x < numeros.length; x += 1) {
     if (numeros[x] === maiorNumero) {
       quantMaior += 1;
@@ -60,6 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numeros) {
+  let i = 0;
   for (i = 0; i < numeros.length; i += 1) {
     if (numeros[i] % 3 === 0 && numeros[i] % 5 !== 0) {
       numeros[i] = 'fizz';
@@ -75,40 +78,26 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode(trocaVogais) {
-  for (i = 0; i < trocaVogais.length; i += 1) {
-    if (trocaVogais[i] == 'a') {
-      trocaVogais[i] = '1';
-    } else if (trocaVogais[i] == 'e') {
-      trocaVogais[i] = '2';
-    } else if (trocaVogais[i] == 'i') {
-      trocaVogais[i] = '3';
-    } else if (trocaVogais[i] == 'o') {
-      trocaVogais[i] = '4';
-    } else if (trocaVogais[i] == 'u') {
-      trocaVogais[i] = '5';
-    }
-  }
-  return trocaVogais;
+function encode([frase]) {
+  let novaFrase = frase
+    .replace(/a/gi, 1)
+    .replace(/e/gi, 2)
+    .replace(/i/gi, 3)
+    .replace(/o/gi, 4)
+    .replace(/u/gi, 5);
+  return novaFrase;
 }
 
-
-function decode(trocaNumeros) {
-  for (i = 0; i < trocaNumeros.length; i += 1) {
-    if (trocaNumeros[i] == '1') {
-      trocaNumeros[i] = 'a';
-    } else if (trocaNumeros[i] == '2') {
-      trocaNumeros[i] = 'e';
-    } else if (trocaNumeros[i] == '3') {
-      trocaNumeros[i] = 'i';
-    } else if (trocaNumeros[i] == '4') {
-      trocaNumeros[i] = 'o';
-    } else if (trocaNumeros[i] == '5') {
-      trocaNumeros[i] = 'u';
-    }
-  }
-  return trocaNumeros;
+function decode([frase2]) {
+  let fraseDecode = frase2
+    .replace(/1/gi, 'a')
+    .replace(/2/gi, 'e')
+    .replace(/3/gi, 'i')
+    .replace(/4/gi, 'o')
+    .replace(/5/gi, 'u');
+  return fraseDecode;
 }
+console.log(decode(['hi th2r2']));
 
 // Desafio 10
 function techList(nomes, name) {
