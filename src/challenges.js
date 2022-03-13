@@ -75,32 +75,62 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode(string) {}
-function decode() {
-  // seu código aqui
+function encode(trocaVogais) {
+  for (i = 0; i < trocaVogais.length; i += 1) {
+    if (trocaVogais[i] == 'a') {
+      trocaVogais[i] = '1';
+    } else if (trocaVogais[i] == 'e') {
+      trocaVogais[i] = '2';
+    } else if (trocaVogais[i] == 'i') {
+      trocaVogais[i] = '3';
+    } else if (trocaVogais[i] == 'o') {
+      trocaVogais[i] = '4';
+    } else if (trocaVogais[i] == 'u') {
+      trocaVogais[i] = '5';
+    }
+  }
+  return trocaVogais;
+}
+
+
+function decode(trocaNumeros) {
+  for (i = 0; i < trocaNumeros.length; i += 1) {
+    if (trocaNumeros[i] == '1') {
+      trocaNumeros[i] = 'a';
+    } else if (trocaNumeros[i] == '2') {
+      trocaNumeros[i] = 'e';
+    } else if (trocaNumeros[i] == '3') {
+      trocaNumeros[i] = 'i';
+    } else if (trocaNumeros[i] == '4') {
+      trocaNumeros[i] = 'o';
+    } else if (trocaNumeros[i] == '5') {
+      trocaNumeros[i] = 'u';
+    }
+  }
+  return trocaNumeros;
 }
 
 // Desafio 10
 function techList(nomes, name) {
-  let tecnologias = [
-    {
-      tech: 'React',
-      name: 'Lucas',
-    },
-    {
-      tech: 'HTML',
-      name: 'Claudio',
-    },
-    {
-      tech: 'CSS',
-      name: 'Gil',
-    },
-    {
-      tech: 'Phyton',
-      name: 'Rose',
-    },
-  ];
-  return tecnologias.tech;
+  //let tecnologias = [
+  //{
+  // tech: 'React',
+  //name: 'Lucas',
+  // },
+  // {
+  // tech: 'HTML',
+  // name: 'Claudio',
+  // },
+  // {
+  //tech: 'CSS',
+  // name: 'Gil',
+  // },
+  /// {
+  //   tech: 'Phyton',
+  // name: 'Rose',
+  // },
+  // ];
+  // return tecnologias.tech;
 }
 
 module.exports = {
