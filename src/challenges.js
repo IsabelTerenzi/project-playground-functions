@@ -97,7 +97,6 @@ function decode([frase2]) {
     .replace(/5/gi, 'u');
   return fraseDecode;
 }
-console.log(decode(['hi th2r2']));
 
 // Desafio 10
 function techList(nomes, name) {
