@@ -78,24 +78,24 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode([frase]) {
-  let novaFrase = frase
-    .replace(/a/gi, 1)
-    .replace(/e/gi, 2)
-    .replace(/i/gi, 3)
-    .replace(/o/gi, 4)
-    .replace(/u/gi, 5);
+function encode(frase) {
+ let novaFrase = frase
+    .replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
   return novaFrase;
 }
 
-function decode([frase]) {
-  let fraseDecode = frase
-    .replace(/1/gi, 'a')
-    .replace(/2/gi, 'e')
-    .replace(/3/gi, 'i')
-    .replace(/4/gi, 'o')
-    .replace(/5/gi, 'u');
-  return fraseDecode;
+function decode(frase) {
+  let novaFrase = frase
+    .replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
+  return novaFrase;
 }
 
 // Desafio 10
