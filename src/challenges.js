@@ -79,7 +79,7 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(frase) {
- let novaFrase = frase
+  let novaFrase = frase
     .replace(/a/g, '1')
     .replace(/e/g, '2')
     .replace(/i/g, '3')
@@ -99,27 +99,23 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList(nomes, name) {
-  //let tecnologias = [
-  //{
-  // tech: 'React',
-  //name: 'Lucas',
-  // },
-  // {
-  // tech: 'HTML',
-  // name: 'Claudio',
-  // },
-  // {
-  //tech: 'CSS',
-  // name: 'Gil',
-  // },
-  /// {
-  //   tech: 'Phyton',
-  // name: 'Rose',
-  // },
-  // ];
-  // return tecnologias.tech;
+function techList(tecnologias, name) {
+  let techEmOrdem = tecnologias.sort();
+  let listaTecnologias = [];
+
+  for (let i = 0; i < techEmOrdem.length; i += 1) {
+    let objeto = {
+      tech: techEmOrdem[i],
+      name: name,
+    };
+    listaTecnologias.push(objeto);
+  }
+  if (listaTecnologias.length === 0) {
+    return 'Vazio!';
+  }
+  return listaTecnologias;
 }
+
 
 module.exports = {
   calcArea,
