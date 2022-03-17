@@ -44,24 +44,24 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     return true;
   }
-  if (lineC < lineB + lineA && lineC > Math.abs(lineB-lineA)) {
+  if (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
     return true;
   }
   return false;
 }
-// Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck 
-//que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores 
-//apresentados de cada linha.
-//Para tanto, tenha em mente algumas considerações:
-//Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor 
-//que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
-//Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
-//O retorno da sua função deverá ser um booleano.
-//Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  let numeros = bebidas.match(/\d+/g).map(Number);
+  let somaNumeros = 0;
+
+  for (i = 0; i < numeros.length; i += 1) {
+    somaNumeros += numeros[i];
+  }
+  if (somaNumeros === 1){
+    return ('1 copo de água');
+  }
+  return (somaNumeros + ' copos de água');
 }
 
 module.exports = {
